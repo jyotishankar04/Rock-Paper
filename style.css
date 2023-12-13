@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background:linear-gradient(#00000036 0%,#00000044 0%), url(https://images.pexels.com/photos/10607184/pexels-photo-10607184.jpeg?auto=compress&cs=tinysrgb&w=600);
+    /* background-color: #F5E8C7; */
+    backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: center;
+}
+
+.topHeading{
+    text-align: center;
+    padding: 30px;
+    color: #F5E8C7;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    background-color: #435585;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    margin-top:10px ;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #435585a0;
+    color: #f5e8c7bf;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.main .gameImgs{
+    width: 100%;
+   display: flex;
+   align-items: center;
+   padding: 10px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main .gameImgs i{
+    font-size: 100px;
+   margin: 20px; 
+    background-color:#818FB4 ;
+    padding: 20px;
+    border-radius: 50%;
+}
+.main .gameImgs i:hover{
+    cursor: pointer;
+    background-color: #3f4a69;
+    box-shadow: #818FB4 0 0 10px;
+
+}
+.main .gameImgs i:active{
+    padding: 18px;
+    border:2px solid #000;
+    color: #000;
+    background-color: #818FB4;
+
+}
+
+.main .winCount{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.massege{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.massege .massegeText{
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: rebeccapurple;
+
+}
+
+.reset{
+    font-size: 25px;
+    background-color: #818FB4;
+    padding: 10px ;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    color: #f5e8c7bf;
+    
+}
+
+.reset:hover{
+
+    background-color: rebeccapurple;
+    border: 2px solid #818FB4;
+    cursor: pointer;
+    /* box-shadow: #818FB4 0 0 20px; */
+    padding: 8px;
+
+}
