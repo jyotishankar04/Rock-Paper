@@ -97,6 +97,7 @@ choseScissor.addEventListener("click",()=>{
 reset.addEventListener("click", ()=>{
     computerScore = 0;
     userScore= 0;
+    updateScore();
     messege.innerHTML = "Play Your Move";
     messege.style.backgroundColor = "rebeccapurple";
     messege.style.color = "#f5e8c7bf"
