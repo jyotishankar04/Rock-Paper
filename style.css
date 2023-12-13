@@ -36,7 +36,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60vh;
+    height: 70vh;
     margin-top:10px ;
     padding: 20px;
     border-radius: 20px;
@@ -124,5 +124,15 @@ body{
     cursor: pointer;
     /* box-shadow: #818FB4 0 0 20px; */
     padding: 8px;
+
+}
+
+@media screen and (max-width:600px) {
+    .main{
+        width: 95%;
+    }
+    .main .gameImgs i{
+        font-size: 40px;
+    }
 
 }
