@@ -25,53 +25,47 @@ const updateScore = ()=>{
 
 }
 
-let choseWinner = (UserChoice, compReturn)=>{
-    if(UserChoice === compReturn){
-        ! console.log("It was a drow!");
-        messege.innerHTML = "It is a Drow";
-        messege.style.backgroundColor = "#EEC759";
+const showWinner = (userWin,UserChoice,compReturn)=>{
+    if(userWin === -1){
+        messege.innerHTML = `It was a drow! try again`;
+        messege.style.backgroundColor = "yellow";
         messege.style.color = "#000";
-
-
-    }else if(compReturn === "rock"){
-        
-         if(UserChoice === "paper"){
-    
-            messege.innerHTML = `You Won!   ${UserChoice} beats ${compReturn}`;
+    }else
+    if(userWin){
+        messege.innerHTML = `You Won! ${UserChoice}  beats ${compReturn} `;
             messege.style.backgroundColor = "#B5D5C5";
             messege.style.color = "#000";
             userScore++;
-
-        }else if(UserChoice === "scissor"){
-    
-            messege.innerHTML = `You Lost!   ${compReturn} beats ${UserChoice}`;
+    }else{
+        messege.innerHTML = `You Lost!   ${compReturn} beats ${UserChoice}`;
             messege.style.backgroundColor = "#9A031E";
             messege.style.color = "#000";    
             computerScore++;
-        }
-    }else if(compReturn === "paper"){
-        
-        messege.innerHTML = `You Won!   ${UserChoice} beats ${compReturn}`;
-        messege.style.backgroundColor = "#B5D5C5";
-        messege.style.color = "#000";
-        userScore++;
-
-    }else if(compReturn === "scissor"){
-        if(UserChoice === "rock"){
-    
-            messege.innerHTML = `You Won!   ${UserChoice} beats ${compReturn}`;
-            messege.style.backgroundColor = "#B5D5C5";
-            messege.style.color = "#000";
-            userScore++;
-
-        }else if(UserChoice === "paper"){
-    
-            messege.innerHTML = `You Lost!   ${compReturn} beats ${UserChoice}`;
-            messege.style.backgroundColor = "#9A031E";
-            messege.style.color = "#000";    
-            computerScore++;
-        }
     }
+}
+
+let choseWinner = (UserChoice, compReturn)=>{
+    
+    let userWin = true;
+    if(UserChoice === compReturn){
+       
+        userWin = -1;
+
+    }else if(compReturn === "paper"){
+    // rock and scissor
+        userWin = UserChoice ==="rock"? false:true;
+        
+        
+    }else if(compReturn === "scissor"){
+        // rock and paper
+       userWin = UserChoice ==="rock"? true:false;
+        
+    }else if(compReturn === "rock"){
+        // rock and paper
+       userWin = UserChoice ==="paper"? true:false;
+        
+    }
+    showWinner(userWin,UserChoice,compReturn);
     updateScore();
 }
 
