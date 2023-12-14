@@ -35,11 +35,20 @@ let choseWinner = (UserChoice, compReturn)=>{
 
     }else if(compReturn === "rock"){
         
-        messege.innerHTML = `You Lost! ${compReturn} beats ${UserChoice}`;
-        messege.style.backgroundColor = "#9A031E";
-        messege.style.color = "#000";
-        computerScore++;
-       
+         if(UserChoice === "paper"){
+    
+            messege.innerHTML = `You Won!   ${UserChoice} beats ${compReturn}`;
+            messege.style.backgroundColor = "#B5D5C5";
+            messege.style.color = "#000";
+            userScore++;
+
+        }else if(UserChoice === "scissor"){
+    
+            messege.innerHTML = `You Lost!   ${compReturn} beats ${UserChoice}`;
+            messege.style.backgroundColor = "#9A031E";
+            messege.style.color = "#000";    
+            computerScore++;
+        }
     }else if(compReturn === "paper"){
         
         messege.innerHTML = `You Won!   ${UserChoice} beats ${compReturn}`;
