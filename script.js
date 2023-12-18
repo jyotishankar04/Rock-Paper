@@ -62,6 +62,7 @@ let choseWinner = (UserChoice, compReturn)=>{
         
     }else if(compReturn === "rock"){
         // rock and paper
+        
        userWin = UserChoice ==="paper"? true:false;
         
     }
