@@ -9,7 +9,7 @@ let userScore = 0;
 let computerScore = 0;
 
 let messege = document.querySelector(".massegeText");
-
+// 
 let reset = document.querySelector(".reset");
 
 function computerChoice() {
